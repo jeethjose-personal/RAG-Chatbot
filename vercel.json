@@ -1,22 +1,12 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "src/frontend",
   "cleanUrls": true,
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "https://rag-chatbot-production-3ebb.up.railway.app/api/:path*"
-    },
-    {
-      "source": "/",
-      "destination": "/src/frontend/index.html"
-    },
-    {
-      "source": "/style.css",
-      "destination": "/src/frontend/style.css"
-    },
-    {
-      "source": "/app.js",
-      "destination": "/src/frontend/app.js"
     }
   ]
 }
