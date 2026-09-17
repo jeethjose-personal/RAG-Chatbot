@@ -1,0 +1,8 @@
+# Exclude Python backend and heavy data files from Vercel frontend build
+data/
+tests/
+Dockerfile
+railway.json
+requirements.txt
+.env
+.env.*

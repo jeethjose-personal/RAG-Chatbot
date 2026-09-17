@@ -197,6 +197,12 @@ class AssistantRequestHandler(BaseHTTPRequestHandler):
         return
 
 
+# Top-level handler exports for cloud/serverless detectors (e.g. Vercel)
+handler = AssistantRequestHandler
+app = AssistantRequestHandler
+application = AssistantRequestHandler
+
+
 def run_server(host: str = "0.0.0.0", port: int = 8501) -> None:
     """Starts the HTTP server on specified port."""
     # Eagerly initialize pipeline

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/src/frontend/index.html"
+    },
+    {
+      "source": "/style.css",
+      "destination": "/src/frontend/style.css"
+    },
+    {
+      "source": "/app.js",
+      "destination": "/src/frontend/app.js"
+    }
+  ]
+}
