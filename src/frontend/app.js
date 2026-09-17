@@ -15,10 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let chatHistory = JSON.parse(localStorage.getItem('groww_rag_history') || '[]');
   let currentSession = [];
 
+  function getApiBaseUrl() {
+    if (window.MF_BACKEND_URL) return window.MF_BACKEND_URL.replace(/\/+$/, '');
+    const saved = localStorage.getItem('mf_backend_url');
+    if (saved) return saved.replace(/\/+$/, '');
+    return '';
+  }
+
   // 1. Fetch Supported Funds from API
   async function loadSupportedFunds() {
     try {
-      const resp = await fetch('/api/funds');
+      const resp = await fetch(`${getApiBaseUrl()}/api/funds`);
       const data = await resp.json();
       renderFunds(data.funds || []);
     } catch (err) {
@@ -202,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     appendTypingIndicator();
 
     try {
-      const resp = await fetch('/api/query', {
+      const resp = await fetch(`${getApiBaseUrl()}/api/query`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: text }),

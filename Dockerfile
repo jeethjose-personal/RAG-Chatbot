@@ -43,5 +43,5 @@ EXPOSE 8501
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD curl -f http://localhost:${PORT:-8501}/api/funds || exit 1
 
-# Launch the production HTTP web application
-CMD ["python3", "src/app.py", "--host", "0.0.0.0", "--port", "8501"]
+# Launch the production HTTP web application (dynamically reading $PORT or defaulting to 8501)
+CMD ["python3", "src/app.py", "--host", "0.0.0.0"]
