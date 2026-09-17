@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.MF_BACKEND_URL) return window.MF_BACKEND_URL.replace(/\/+$/, '');
     const saved = localStorage.getItem('mf_backend_url');
     if (saved) return saved.replace(/\/+$/, '');
-    return '';
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return '';
+    return 'https://rag-chatbot-production-3ebb.up.railway.app';
   }
 
   // 1. Fetch Supported Funds from API
