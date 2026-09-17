@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groww Mutual Fund FAQ Assistant</title>
+  <meta name="description" content="Official facts-only mutual fund FAQ assistant for 5 select HDFC schemes on Groww. Strict compliance with zero investment advice.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%2300D09C%22/></svg>">
+</head>
+<body>
+  <div id="app-layout">
+    
+    <!-- LEFT SIDEBAR PANE -->
+    <aside id="sidebar" aria-label="Scheme Navigation and Chat History">
+      <!-- New Chat Action -->
+      <button id="btn-new-chat" class="btn-new-chat" type="button">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        New Conversation
+      </button>
+
+      <!-- Supported Funds Section -->
+      <section>
+        <div class="sidebar-section-title">
+          <span>Supported Funds</span>
+          <span>5 Schemes</span>
+        </div>
+        <div id="funds-list" class="funds-list">
+          <!-- Populated dynamically via /api/funds -->
+        </div>
+      </section>
+
+      <!-- Chat History Section -->
+      <section style="flex: 1; display: flex; flex-direction: column;">
+        <div class="sidebar-section-title">
+          <span>Recent History</span>
+        </div>
+        <div id="history-list" class="history-list">
+          <!-- Populated dynamically from chat sessions -->
+        </div>
+      </section>
+
+      <!-- Sidebar Footer -->
+      <footer class="sidebar-footer">
+        <span>Groww Facts RAG Engine</span>
+        <span>v1.0.0</span>
+      </footer>
+    </aside>
+
+    <!-- MAIN CHAT AREA -->
+    <main id="chat-container">
+      
+      <!-- Top Brand Header (No intrusive banner) -->
+      <header id="app-header">
+        <div class="header-brand">
+          <div class="groww-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 18h16c.6 0 1-.4 1-1V7c0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1v10c0 .6.4 1 1 1zm8-9.5l4 4-1.4 1.4L12 11.3l-2.6 2.6L8 12.5l4-4z"/>
+            </svg>
+          </div>
+          <div class="header-titles">
+            <h1>Groww Mutual Fund FAQ Assistant</h1>
+            <p>Factual scheme information for 5 select HDFC mutual funds</p>
+          </div>
+        </div>
+
+        <div class="compliance-tag" title="Strict Facts-Only Compliance Guard active">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+          <span>Facts-only • Zero Advice</span>
+        </div>
+      </header>
+
+      <!-- Conversation Scroll Stream -->
+      <section id="messages-scroll" aria-label="Conversation Messages" aria-live="polite">
+        <!-- Messages rendered here -->
+      </section>
+
+      <!-- Quick Suggested Prompt Bubbles (Right above input) -->
+      <nav id="quick-prompts-container" aria-label="Suggested Questions">
+        <button class="prompt-chip" type="button" data-query="What is the expense ratio and exit load for HDFC Flexi Cap Fund?">
+          💬 What is the expense ratio & exit load for HDFC Flexi Cap?
+        </button>
+        <button class="prompt-chip" type="button" data-query="What is the lock-in period and minimum SIP for HDFC ELSS Tax Saver?">
+          💬 Lock-in period for HDFC ELSS Tax Saver?
+        </button>
+        <button class="prompt-chip" type="button" data-query="What is the riskometer rating and benchmark for HDFC Mid-Cap Opportunities Fund?">
+          💬 Riskometer rating for HDFC Mid-Cap?
+        </button>
+      </nav>
+
+      <!-- Bottom Query Input Bar -->
+      <footer id="input-container">
+        <form id="chat-form" class="input-box" onsubmit="return false;">
+          <div class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+          <input 
+            type="text" 
+            id="query-input" 
+            placeholder="Ask a factual question (e.g. What is the AUM of HDFC Mid Cap Direct Growth?)..." 
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="btn-send" class="btn-send" aria-label="Send Query">
+            <svg viewBox="0 0 24 24">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </form>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "amc_name": "HDFC Mutual Fund",
+  "corpus_description": "Strict closed-world corpus of 5 designated Groww mutual fund scheme pages for factual FAQ assistant.",
+  "total_schemes": 5,
+  "schemes": [
+    {
+      "scheme_id": "hdfc_mid_cap_fund",
+      "scheme_name": "HDFC Mid-Cap Opportunities Fund Direct Growth",
+      "display_name": "HDFC Mid-Cap Opportunities Fund",
+      "category": "Mid Cap Fund",
+      "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+      "groww_slug": "hdfc-mid-cap-fund-direct-growth",
+      "plan_type": "Direct",
+      "option_type": "Growth",
+      "aliases": [
+        "hdfc mid cap",
+        "hdfc mid cap fund",
+        "hdfc mid cap opportunities",
+        "hdfc mid-cap opportunities fund",
+        "mid cap fund"
+      ],
+      "status": "active",
+      "last_verified_date": "2024-03-31"
+    },
+    {
+      "scheme_id": "hdfc_flexi_cap_fund",
+      "scheme_name": "HDFC Flexi Cap Fund Direct Growth",
+      "display_name": "HDFC Flexi Cap Fund",
+      "category": "Flexi Cap Fund",
+      "source_url": "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth",
+      "groww_slug": "hdfc-equity-fund-direct-growth",
+      "plan_type": "Direct",
+      "option_type": "Growth",
+      "aliases": [
+        "hdfc flexi cap",
+        "hdfc flexi cap fund",
+        "hdfc equity",
+        "hdfc equity fund",
+        "flexi cap fund"
+      ],
+      "status": "active",
+      "last_verified_date": "2024-03-31"
+    },
+    {
+      "scheme_id": "hdfc_focused_fund",
+      "scheme_name": "HDFC Focused 30 Fund Direct Growth",
+      "display_name": "HDFC Focused 30 Fund",
+      "category": "Focused Fund",
+      "source_url": "https://groww.in/mutual-funds/hdfc-focused-fund-direct-growth",
+      "groww_slug": "hdfc-focused-fund-direct-growth",
+      "plan_type": "Direct",
+      "option_type": "Growth",
+      "aliases": [
+        "hdfc focused",
+        "hdfc focused fund",
+        "hdfc focused 30",
+        "hdfc focused 30 fund",
+        "focused fund"
+      ],
+      "status": "active",
+      "last_verified_date": "2024-03-31"
+    },
+    {
+      "scheme_id": "hdfc_elss_tax_saver_fund",
+      "scheme_name": "HDFC ELSS Tax Saver Fund Direct Plan Growth",
+      "display_name": "HDFC ELSS Tax Saver Fund",
+      "category": "ELSS (Equity Linked Savings Scheme)",
+      "source_url": "https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth",
+      "groww_slug": "hdfc-elss-tax-saver-fund-direct-plan-growth",
+      "plan_type": "Direct",
+      "option_type": "Growth",
+      "aliases": [
+        "hdfc elss",
+        "hdfc tax saver",
+        "hdfc elss tax saver",
+        "hdfc tax saver fund",
+        "elss",
+        "elss tax saver",
+        "tax saver",
+        "tax saver fund"
+      ],
+      "status": "active",
+      "last_verified_date": "2024-03-31"
+    },
+    {
+      "scheme_id": "hdfc_large_cap_fund",
+      "scheme_name": "HDFC Top 100 Fund Direct Growth",
+      "display_name": "HDFC Top 100 Fund",
+      "category": "Large Cap Fund",
+      "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+      "groww_slug": "hdfc-large-cap-fund-direct-growth",
+      "plan_type": "Direct",
+      "option_type": "Growth",
+      "aliases": [
+        "hdfc top 100",
+        "hdfc top 100 fund",
+        "hdfc large cap",
+        "hdfc large cap fund",
+        "large cap fund",
+        "top 100"
+      ],
+      "status": "active",
+      "last_verified_date": "2024-03-31"
+    }
+  ]
+}
